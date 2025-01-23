@@ -29,6 +29,7 @@
 			linux,code = <KEY_RESTART>;
 		};
 	};
+    
 	leds {
 		compatible = "gpio-leds";
 
@@ -62,6 +63,7 @@
 			gpios = <&gpio3 0 GPIO_ACTIVE_HIGH>;
 		};
 	};
+
 	gpio_export {
 		compatible = "gpio-export";
 		#size-cells = <0>;
