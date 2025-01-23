@@ -29,7 +29,7 @@
 			linux,code = <KEY_RESTART>;
 		};
 	};
-    
+
 	leds {
 		compatible = "gpio-leds";
 
@@ -48,7 +48,7 @@
 			gpios = <&gpio2 0 GPIO_ACTIVE_LOW>;
 		};
 
-		led_sstrengthr: sstrengthr {
+		sstrengthr {
 			label = "red:sigstrength";
 			gpios = <&gpio2 1 GPIO_ACTIVE_LOW>;
 		};
