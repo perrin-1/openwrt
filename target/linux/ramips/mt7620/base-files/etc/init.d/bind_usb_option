@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+
+# Make USB Serial Option driver recognize the lte card built into the Zyxel LTE3302
+
+START=50
+
+boot() {
+    case $(board_name) in
+	zyxel,lte3302)
+		echo "1435 3185" > /sys/bus/usb-serial/drivers/option1/new_id
+        ;;
+	esac
+}
