@@ -2,11 +2,12 @@
 
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/input/input.h>
+#include <dt-bindings/leds/common.h>
 #include <dt-bindings/mtd/partitions/uimage.h>
 
 / {
 	compatible = "zyxel,lte3302", "ralink,mt7620n-soc";
-	model = "Zyxel LTE3302-M432";
+	model = "Zyxel LTE3302";
 
 
 	aliases {
@@ -35,31 +36,39 @@
 
 		onlineg {
 			label = "green:online";
+			color = <LED_COLOR_ID_GREEN>;
 			gpios = <&gpio1 15 GPIO_ACTIVE_LOW>;
 		};
 
 		led_onliney: onliney {
 			label = "yellow:online";
+			color = <LED_COLOR_ID_YELLOW>;
 			gpios = <&gpio2 3 GPIO_ACTIVE_LOW>;
 		};
 
 		led_sstrengthg: sstrengthg {
 			label = "green:sigstrength";
+			color = <LED_COLOR_ID_GREEN>;
 			gpios = <&gpio2 0 GPIO_ACTIVE_LOW>;
 		};
 
 		sstrengthr {
 			label = "red:sigstrength";
+			color = <LED_COLOR_ID_RED>;
 			gpios = <&gpio2 1 GPIO_ACTIVE_LOW>;
 		};
 
 		lan {
 			label = "green:lan";
+			color = <LED_COLOR_ID_GREEN>;
+			function = LED_FUNCTION_LAN;
 			gpios = <&gpio1 14 GPIO_ACTIVE_HIGH>;
 		};
 
 		wifi {
 			label = "green:wifi";
+			color = <LED_COLOR_ID_GREEN>;
+			function = LED_FUNCTION_WLAN;
 			gpios = <&gpio3 0 GPIO_ACTIVE_HIGH>;
 		};
 	};
