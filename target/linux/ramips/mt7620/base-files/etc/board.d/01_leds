@@ -286,8 +286,8 @@ zbtlink,zbt-we2026)
 zyxel,lte3302)
 	ucidef_set_led_switch "lan" "lan" "green:lan" "switch0" "0x03"
 	ucidef_set_led_netdev "wifi_led" "WiFi" "green:wifi" "wlan0"
-	ucidef_set_led_netdev "online_green" "Online Status Green" "green:online" "wwan0" "link"
-	ucidef_set_led_default "online_yellow" "Online Status Yellow" "yellow:online" "timer" 500 500
+	ucidef_set_led_netdev "online_green" "Online Status Green" "green:online" "wwan0"
+	ucidef_set_led_default "online_yellow" "Online Status Yellow" "yellow:online" "none"
 	ucidef_set_led_default "signalstrength_red" "Signal Strength Red" "red:sigstrength" "none"
 	ucidef_set_led_default "signalstrength_green" "Signal Strength Green" "green:sigstrength" "none"
 	;;
